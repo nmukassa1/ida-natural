@@ -8,7 +8,6 @@ function CollectionsPage() {
    
     return ( 
         <div>
-           collections page
            {/* {pathname} */}
         </div>
      );

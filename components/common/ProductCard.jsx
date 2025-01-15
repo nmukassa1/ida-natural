@@ -3,7 +3,7 @@ import ImagePlaceholder from "./ImagePlaceholder";
 
 function ProductCard({className}) {
     return ( 
-        <Link href='/'>
+        <Link href='/product/'>
             <div className={`${className} w-[300px] border-2 border-black rounded-lg overflow-hidden shrink-0`}>
                 <div className="h-[270px]">
                     <ImagePlaceholder />

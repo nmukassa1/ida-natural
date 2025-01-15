@@ -1,4 +1,5 @@
 import CategoriesSlide from "@/components/common/CategoriesSlide";
+import NewsletterSignUpForm from "@/components/common/NewsletterSignUpForm";
 import Testimonials from "@/components/common/Testimonials";
 import About from "@/components/HomePage/About/About";
 import About2 from "@/components/HomePage/About/About2";
@@ -17,6 +18,7 @@ export default function Home() {
       <CategoriesSlide />
       <Ingredients />
       <Testimonials />
+      <NewsletterSignUpForm />
     </>
   );
 }
