@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const EmptyCart = () => {
@@ -19,9 +20,9 @@ const EmptyCart = () => {
       </svg>
       <h2 className="text-lg font-medium text-gray-700">Your cart is empty</h2>
       <p className="text-sm text-gray-500 mb-4">Looks like you haven’t added anything to your cart yet.</p>
-      <button className="px-6 py-2 text-white bg-black rounded-full text-sm font-medium">
+      <Link href="/collections" className="px-6 py-2 text-white bg-black rounded-full text-sm font-medium">
         Continue Shopping
-      </button>
+      </Link>
     </div>
   );
 };

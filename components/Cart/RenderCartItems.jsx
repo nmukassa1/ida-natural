@@ -1,16 +1,14 @@
+import { useCart } from "@/lib/providers/CartProvider";
 import CartItem from "./CartItem";
+import { Fragment } from "react";
 
 function RenderCartItems() {
+    const {cart} = useCart();
     return ( 
         <div className="my-2 overflow-scroll">
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
-            <CartItem />
+            {cart.map((item, index) => (
+               <Fragment key={index}>{item}</Fragment>
+            ))}
         </div>
      );
 }

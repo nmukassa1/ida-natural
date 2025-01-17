@@ -6,7 +6,7 @@ import CheckoutSection from './CheckoutSection';
 import EmptyCart from './EmptyCart';
 
 function CartDrawer() {
-    const {toggleCart, setToggleCart} = useCart();
+    const {toggleCart, setToggleCart, cart} = useCart();
 
     return ( 
         <Drawer open={toggleCart} anchor="right">
@@ -15,9 +15,14 @@ function CartDrawer() {
                     <h1>Your cart (3)</h1>
                     <button onClick={() => setToggleCart((prev) => !prev)}>Close</button>
                 </header>
-                <RenderCartItems />
-                <CheckoutSection />
-                {/* <EmptyCart /> */}
+                {cart.length ? (
+                    <>
+                        <RenderCartItems />
+                        <CheckoutSection />
+                    </>
+                ) : (
+                    <EmptyCart />
+                )}
             </div>
         </Drawer>
      );
