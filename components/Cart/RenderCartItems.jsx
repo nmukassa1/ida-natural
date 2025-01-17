@@ -3,11 +3,13 @@ import CartItem from "./CartItem";
 import { Fragment } from "react";
 
 function RenderCartItems() {
-    const {cart} = useCart();
+    const { cart } = useCart();
     return ( 
         <div className="my-2 overflow-scroll">
             {cart.map((item, index) => (
-               <Fragment key={index}>{item}</Fragment>
+               <Fragment key={index}>
+                   <CartItem item={item} />
+               </Fragment>
             ))}
         </div>
      );

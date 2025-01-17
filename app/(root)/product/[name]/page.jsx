@@ -48,12 +48,7 @@ const page = async ({params}) => {
           />
 
           {/* Quantity Selector and Add to Cart Button */}
-          <div className="flex items-center gap-4 mb-4">
-            <QuantitySelector />
-            <button className="flex-1 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
-              ADD TO CART
-            </button>
-          </div>
+            <QuantitySelector product={product} />
 
           <ProductFeatures 
             features={product.features}
@@ -63,11 +58,11 @@ const page = async ({params}) => {
             icons={product.icons.map(icon => ({ name: icon }))}
           />
 
-<ProductAccordion 
-  description={product.description} // Pass product description
-  ingredients={product.ingredients} // Pass product ingredients
-  howToUse={product.howToUse} // Pass product howToUse
-/>
+          <ProductAccordion 
+            description={product.description} // Pass product description
+            ingredients={product.ingredients} // Pass product ingredients
+            howToUse={product.howToUse} // Pass product howToUse
+          />
         </div>
       </div>
 
