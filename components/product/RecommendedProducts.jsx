@@ -4,12 +4,6 @@ import ProductCard from '../common/ProductCard';
 import { products } from '@/lib/database/products';
 
 const RecommendedProducts = () => {
-  const products = [
-    { id: 1, name: 'Pink Clay Cleansing Bar', price: '24.00' },
-    { id: 2, name: 'Jasmine Body Oil', price: '48.00' },
-    { id: 3, name: 'Prism Exfoliating Glow Serum', price: '54.00' },
-    { id: 4, name: 'Rose Quartz Facial Roller', price: '40.00' },
-  ];
 
   return (
     <div className="py-6 border-t border-gray-200">

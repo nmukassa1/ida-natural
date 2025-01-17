@@ -1,6 +1,9 @@
+import { useCart } from "@/lib/providers/CartProvider";
 import ImagePlaceholder from "../common/ImagePlaceholder";
 
 const CartItem = ({ item }) => {
+  const {removeItemFromCart} = useCart()
+
   return (
     <div className="flex items-center justify-between p-4 border-b border-gray-300">
       <div className="h-[100px] w-[80px]">
@@ -15,7 +18,7 @@ const CartItem = ({ item }) => {
             <button className="px-3 py-1 grow-2">+</button>
           </div>
           <span className="text-lg font-semibold">${(item.price * item.quantity).toFixed(2)}</span>
-          <button className="text-gray-500 hover:text-red-500">🗑️</button>
+          <button className="text-gray-500 hover:text-red-500" onClick={() => removeItemFromCart(item.id)}>🗑️</button>
         </div>
       </div>
     </div>
