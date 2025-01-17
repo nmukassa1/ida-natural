@@ -1,7 +1,9 @@
+import { useCart } from '@/lib/providers/CartProvider';
 import Link from 'next/link';
 import React from 'react';
 
 const EmptyCart = () => {
+  const {setToggleCart} = useCart()
   return (
     <div className="flex flex-col items-center justify-center h-full text-center bg-gray-50 border border-gray-300 rounded-lg my-2">
       <svg
@@ -20,7 +22,7 @@ const EmptyCart = () => {
       </svg>
       <h2 className="text-lg font-medium text-gray-700">Your cart is empty</h2>
       <p className="text-sm text-gray-500 mb-4">Looks like you haven’t added anything to your cart yet.</p>
-      <Link href="/collections" className="px-6 py-2 text-white bg-black rounded-full text-sm font-medium">
+      <Link href="/collections" onClick={() => setToggleCart(false)} className="px-6 py-2 text-white bg-black rounded-full text-sm font-medium">
         Continue Shopping
       </Link>
     </div>
