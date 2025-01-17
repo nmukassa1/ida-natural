@@ -1,7 +1,7 @@
 import ProductCard from "@/components/common/ProductCard";
 import ProductsSlide from "@/components/common/ProductsSlide";
 import { collections } from "@/lib/hooks";
-
+import { products } from "@/lib/database/products";
 async function page({params}) {
     const name = (await params).name
     const subMenu = collections.find(collection => collection.title === name).subMenu
@@ -10,7 +10,7 @@ async function page({params}) {
 
         <div className="sticky top-[70px] pb-[20px] bg-white">
             {subMenu && (
-                <ul className="flex gap-2 mt-4">
+                <ul className="flex gap-2 mt-4 overflow-scroll">
                     {subMenu.map((item, index) => (
                         <li key={index} className={`pill-button-sm `}>{item}</li>
                     ))}
@@ -32,10 +32,10 @@ async function page({params}) {
 
         </div>
 
-            <div className="flex gap-6 mt-4 grid grid-cols-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
                     {Array(14).fill().map((_, i) => {
                         return (
-                            <ProductCard key={i} className="w-full" />
+                            <ProductCard key={i} className="w-full" product={products[i]} />
                         )
                     })}
                 </div>

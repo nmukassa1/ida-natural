@@ -2,7 +2,7 @@ import ImagePlaceholder from "@/components/common/ImagePlaceholder";
 
 function Info() {
     return ( 
-        <div className="global-align-center flex items-center gap-8 my-[5%]">
+        <div className="global-align-center flex flex-col lg:flex-row lg:items-center gap-8 my-[5%]">
             {Array(3).fill().map((_, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
                     <div className="h-[70px] w-[70px] bg-gray-400 rounded-full overflow-hidden">

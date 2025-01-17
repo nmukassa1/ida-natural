@@ -4,7 +4,7 @@ import ValueProposition from "./ValueProposition";
 function Hero() {
     return ( 
         <div className="global-align-center">
-            <div className="border-2 border-black rounded-2xl px-8 py-[4rem] flex items-center">
+            <div className="border-2 border-black rounded-2xl px-4 md:px-8 py-8 md:py-[4rem] flex items-center">
                <ValueProposition />
             </div>
         </div>

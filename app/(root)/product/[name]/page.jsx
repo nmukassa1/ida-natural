@@ -1,3 +1,4 @@
+
 import ImagePlaceholder from '@/components/common/ImagePlaceholder';
 import React from 'react';
 import ProductHeader from '@/components/product/ProductHeader';
@@ -6,8 +7,16 @@ import ProductFeatures from '@/components/product/ProductFeatures';
 import ProductIcons from '@/components/product/ProductIcons';
 import ProductAccordion from '@/components/product/ProductAccordion';
 import RecommendedProducts from '@/components/product/RecommendedProducts';
+import { products } from '@/lib/database/products';
 
-const page = () => {
+const page = async ({params}) => {
+  const name = (await params).name
+  const product = products.find(product => product.slug === name);
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
   return (
     <div className="flex flex-col">
       <div className="flex flex-col lg:flex-row p-4 lg:px-8 gap-8">
@@ -15,7 +24,7 @@ const page = () => {
         <div className="flex gap-4 w-full lg:w-1/2">
           {/* Small Thumbnails */}
           <div className="flex flex-col gap-4 w-20">
-            {[1, 2, 3].map((_, index) => (
+            {product.images.map((image, index) => (
               <div 
                 key={index} 
                 className="w-20 h-20 rounded-lg border border-gray-200 overflow-hidden"
@@ -33,9 +42,9 @@ const page = () => {
         {/* Right Section: Product Details */}
         <div className="w-full lg:w-1/2 flex flex-col">
           <ProductHeader 
-            brand="HERBIVORE"
-            title="Bakuchiol Retinol Alternative Serum"
-            price="$55.00"
+            brand={product.brand}
+            title={product.name}
+            price={`$${product.price.toFixed(2)}`}
           />
 
           {/* Quantity Selector and Add to Cart Button */}
@@ -47,30 +56,18 @@ const page = () => {
           </div>
 
           <ProductFeatures 
-            features={[
-              '100% Vegan & organic',
-              'Cruelty Free & Parabens Free',
-              'Strongly moisturizes, softens and smoothens'
-            ]}
+            features={product.features}
           />
 
           <ProductIcons 
-            icons={[
-              { name: 'Recyclable' },
-              { name: 'Gluten-free' },
-              { name: 'Vegan' },
-              { name: 'Cruelty free' }
-            ]}
+            icons={product.icons.map(icon => ({ name: icon }))}
           />
 
-          <ProductAccordion 
-            sections={[
-              'Description',
-              'How to use',
-              'Ingredients',
-              'Delivery and return policy'
-            ]}
-          />
+<ProductAccordion 
+  description={product.description} // Pass product description
+  ingredients={product.ingredients} // Pass product ingredients
+  howToUse={product.howToUse} // Pass product howToUse
+/>
         </div>
       </div>
 

@@ -5,7 +5,7 @@ function Ingredients() {
     return ( 
         <RoundedContainer className="p-6 flex flex-col mt-12">
             <h1 className="text-4xl">Ingredients</h1>
-            <div className="grid grid-cols-2 gap-12 grow mt-6">
+            <div className="grid lg:grid-cols-2 gap-12 grow mt-6">
                 <div className="rounded-md overflow-hidden">
                     <ImagePlaceholder />
                 </div>

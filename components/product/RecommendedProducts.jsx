@@ -1,18 +1,7 @@
 import React from 'react';
 import ImagePlaceholder from '@/components/common/ImagePlaceholder';
 import ProductCard from '../common/ProductCard';
-
-// const ProductCard = ({ product }) => {
-//   return (
-//     <div className="flex flex-col">
-//       <div className="aspect-square rounded-lg border border-gray-200 overflow-hidden bg-gray-50 mb-4">
-//         <ImagePlaceholder />
-//       </div>
-//       <h3 className="text-sm font-medium mb-1">{product.name}</h3>
-//       <p className="text-sm text-gray-500">${product.price}</p>
-//     </div>
-//   );
-// };
+import { products } from '@/lib/database/products';
 
 const RecommendedProducts = () => {
   const products = [
@@ -30,7 +19,7 @@ const RecommendedProducts = () => {
           <ProductCard key={product.id} product={product} />
         ))} */}
         {Array.from({ length: 4 }).map((_, index) => (
-          <ProductCard key={index} className="w-full"/>
+          <ProductCard key={index} className="w-full" product={products[index]}/>
         ))}
       </div>
     </div>
