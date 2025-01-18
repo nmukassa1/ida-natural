@@ -9,7 +9,8 @@ export default {
   theme: {
   	extend: {
   		colors: {
-  			background: 'var(--background)',
+  			// background: 'var(--background)',
+  			background: '#F8F1F4',
   			foreground: 'var(--foreground)'
   		},
   		borderRadius: {

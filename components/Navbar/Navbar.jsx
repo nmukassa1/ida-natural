@@ -10,7 +10,7 @@ function Navbar() {
     ];
 
     return ( 
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-4 ">
             {navLinks.map((link, index) => (
                 <NavLink href={"/collections/" + link.title.charAt(0).toLowerCase() + link.title.slice(1)} title={link.title} key={index} className="nav-link" />
             ))}

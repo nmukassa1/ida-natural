@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-background antialiased min-h-screen flex flex-col`}
       >
         <CartProvider>
           <Header />

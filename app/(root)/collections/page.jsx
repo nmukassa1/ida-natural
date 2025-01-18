@@ -1,8 +1,6 @@
 "use client"
 import ProductCard from "@/components/common/ProductCard";
-import Features from "@/components/HomePage/Features/Features";
 import {products} from '@/lib/database/products'
-import { collections } from "@/lib/database/products";
 
 
 function CollectionsPage() {
@@ -11,13 +9,7 @@ function CollectionsPage() {
     return ( 
       <div className="mt-4">
          <div className="sticky top-[70px] pb-[20px] bg-white">
-            {/* {collections && (
-                <ul className="flex gap-2 mt-4 overflow-scroll">
-                    {collections.map((item, index) => (
-                        <li key={index} className={`pill-button-sm `}>{item}</li>
-                    ))}
-                </ul>
-            )} */}
+            
 
             <div className="flex justify-between mt-8 ">
                <h3>22 products</h3>
