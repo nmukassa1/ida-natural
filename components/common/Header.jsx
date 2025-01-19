@@ -23,9 +23,9 @@ function Header() {
     }, []);
 
     return ( 
-        <header className={`h-[70px] z-[999] global-align-center flex items-center justify-between sticky top-0 transition-bg duration-300 ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
-            <BrandLogoButton />
+        <header className={`h-[70px] z-[999] global-align-center flex items-center justify-between sticky top-0 transition-bg duration-300 relative ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
             <Navbar />
+            <BrandLogoButton />
             <CartToggle />
         </header>
      );

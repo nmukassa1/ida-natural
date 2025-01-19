@@ -8,12 +8,12 @@ function ProductCard({className, product}) {
 
     return ( 
         <Link href={`/product/${product.slug}`}>
-            <div className={`${className} md:min-w-[300px] rounded-lg overflow-hidden shrink-0 shadow-sm`}>
-                <div className="h-[180px] md:h-[270px]">
+            <div className={`${className} md:min-w-[340px] rounded-md overflow-hidden shrink-0 shadow-sm`}>
+                <div className="h-[180px] md:h-[60vh]">
                     <ImagePlaceholder />
                 </div>
 
-                <div className="flex items-center justify-between px-2 md:px-4 py-6 bg-[#f0e0ef]">
+                <div className="flex items-center justify-between px-2 md:px-4 py-6 bg-white">
                         <h3 className="text-sm md:text-base whitespace-nowrap overflow-hidden text-ellipsis w-3/4">{product.name}</h3>
                         <p className="text-sm md:text-base">£{product.price}</p>
                 </div>

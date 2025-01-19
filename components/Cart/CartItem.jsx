@@ -17,7 +17,7 @@ const CartItem = ({ item }) => {
             <input className="text-lg focus:outline-none w-[30px] text-center" type="number" value={item.quantity} readOnly/>
             <button className="px-3 py-1 grow-2">+</button>
           </div>
-          <span className="text-lg font-semibold">${(item.price * item.quantity).toFixed(2)}</span>
+          <span className="text-lg font-semibold">£{(item.price * item.quantity).toFixed(2)}</span>
           <button className="text-gray-500 hover:text-red-500" onClick={() => removeItemFromCart(item.id)}>🗑️</button>
         </div>
       </div>

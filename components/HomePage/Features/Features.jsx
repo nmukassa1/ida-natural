@@ -1,10 +1,10 @@
 import FeaturesHeader from "./FeaturesHeader";
 import ProductsSlide from "../../common/ProductsSlide";
 
-function Features() {
+function Features({title}) {
     return ( 
         <div className="mt-8">
-            <FeaturesHeader />
+            <FeaturesHeader title={title} />
             <ProductsSlide />
         </div>
      );

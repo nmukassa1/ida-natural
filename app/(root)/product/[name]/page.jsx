@@ -44,7 +44,7 @@ const page = async ({params}) => {
           <ProductHeader 
             brand={product.brand}
             title={product.name}
-            price={`$${product.price.toFixed(2)}`}
+            price={`£${product.price.toFixed(2)}`}
           />
 
           {/* Quantity Selector and Add to Cart Button */}

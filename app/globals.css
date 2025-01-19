@@ -2,9 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* #hero {
+  background: url("/brooke-lark-kXQ3J7_2fpc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+filter: brightness(0.8) contrast(1.2);
+} */
 
+select{
+  background: transparent;
+}
+select:focus{
+  outline: none;
+}
 
 @layer utilities {
+    /* .global-align-center{@apply px-14} */
     .global-align-center{@apply px-6}
     .global-align-right{@apply pr-6}
     .global-align-left{@apply pl-6}

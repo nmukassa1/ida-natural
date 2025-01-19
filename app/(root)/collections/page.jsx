@@ -8,7 +8,7 @@ function CollectionsPage() {
    
     return ( 
       <div className="mt-4">
-         <div className="sticky top-[70px] pb-[20px] bg-white">
+         <div className="">
             
 
             <div className="flex justify-between mt-8 ">
@@ -27,7 +27,7 @@ function CollectionsPage() {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
            {products.map((product) => (
-               <ProductCard product={product} key={product.id} />
+               <ProductCard product={product} key={product.id}  />
            ))}
         </div>
       </div>
