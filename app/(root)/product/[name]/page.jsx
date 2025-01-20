@@ -35,7 +35,7 @@ const page = async ({params}) => {
             ))}
           </div>
           {/* Main Image */}
-          <div className="flex-1 rounded-lg border border-gray-200 overflow-hidden bg-purple-50">
+          <div className="flex-1 rounded-lg border border-gray-200 overflow-hidden bg-purple-50 lg:h-[573px]">
             <ImagePlaceholder />
           </div>
         </div>
