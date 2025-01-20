@@ -1,4 +1,5 @@
 import CategoriesSlide from "@/components/common/CategoriesSlide";
+import CollectionsNavbar from "@/components/common/CollectionsNavbar";
 import ImagePlaceholder from "@/components/common/ImagePlaceholder";
 import NewsletterSignUpForm from "@/components/common/NewsletterSignUpForm";
 import Testimonials from "@/components/common/Testimonials";
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <h2 className="py-24 text-center text-3xl">Handcrafted beauty products made with integrity, sustainability, and love. <br /> Rediscover your skin's natural radiance.</h2>
+      <CollectionsNavbar />
       <Features title="What's Popular" />
       <div>
         <div className="container mx-auto h-[60vh] mt-24 grid grid-cols-2 gap-4">
