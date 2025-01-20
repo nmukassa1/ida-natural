@@ -1,6 +1,5 @@
 
 import ImagePlaceholder from '@/components/common/ImagePlaceholder';
-import React from 'react';
 import ProductHeader from '@/components/product/ProductHeader';
 import QuantitySelector from '@/components/product/QuantitySelector';
 import ProductFeatures from '@/components/product/ProductFeatures';
@@ -8,6 +7,11 @@ import ProductIcons from '@/components/product/ProductIcons';
 import ProductAccordion from '@/components/product/ProductAccordion';
 import RecommendedProducts from '@/components/product/RecommendedProducts';
 import { products } from '@/lib/database/products';
+import { ProductProvider } from '@/lib/providers/ProductProvider';
+import VariantSelector from '@/components/product/VariantSelector';
+import AddToCartForm from '@/components/product/AddToCartForm';
+
+
 
 const page = async ({params}) => {
   const name = (await params).name
@@ -17,8 +21,9 @@ const page = async ({params}) => {
     return <div>Product not found</div>;
   }
 
+
   return (
-    <>
+    <ProductProvider product={product}>
 
       <div className="flex flex-col lg:flex-row p-4 lg:px-8 gap-8">
         {/* Left Section: Product Images */}
@@ -48,9 +53,13 @@ const page = async ({params}) => {
             price={`£${product.price.toFixed(2)}`}
           />
           
+          {/* Variant Selector */}
+          {/* <VariantSelector /> */}
 
           {/* Quantity Selector and Add to Cart Button */}
-            <QuantitySelector product={product} />
+          {/* <QuantitySelector product={product} /> */}
+
+          <AddToCartForm />
 
           <ProductFeatures 
             features={product.features}
@@ -73,7 +82,7 @@ const page = async ({params}) => {
         <RecommendedProducts />
       </div>
       
-    </>
+    </ProductProvider>
   );
 };
 

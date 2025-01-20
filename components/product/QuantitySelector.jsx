@@ -1,8 +1,10 @@
 "use client"
 import React, { useState } from 'react';
 import { useCart } from '@/lib/providers/CartProvider';
+import { useProduct } from '@/lib/providers/ProductProvider';
 
-const QuantitySelector = ({ product }) => {
+const QuantitySelector = () => {
+  const {product} = useProduct()
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart } = useCart();
 
@@ -25,6 +27,7 @@ const QuantitySelector = ({ product }) => {
             <button 
               onClick={decrease}
               className="px-6 py-4 text-gray-700 hover:bg-gray-50"
+              type='button'
             >
               −
             </button>
@@ -32,6 +35,7 @@ const QuantitySelector = ({ product }) => {
             <button 
               onClick={increase}
               className="px-6 py-4 text-gray-700 hover:bg-gray-50"
+              type='button'
             >
               +
             </button>
@@ -39,7 +43,7 @@ const QuantitySelector = ({ product }) => {
 
       </div>
       
-      <button onClick={handleAddToCart} className="flex-1 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
+      <button onClick={handleAddToCart} className="flex-1 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition" type='button'>
         ADD TO CART
       </button>
     </div>
