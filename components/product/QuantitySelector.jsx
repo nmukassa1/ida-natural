@@ -21,17 +21,17 @@ const QuantitySelector = ({ product }) => {
 
   return (
     <div className="flex items-center gap-4 mb-4">
-      <div className="flex items-center border border-gray-300 rounded-lg">
+      <div className="flex items-center border border-gray-300 rounded-full overflow-hidden">
             <button 
               onClick={decrease}
-              className="px-4 py-2 text-gray-700 hover:bg-gray-50"
+              className="px-6 py-4 text-gray-700 hover:bg-gray-50"
             >
               −
             </button>
-            <span className="px-4 py-2 text-gray-700">{quantity}</span>
+            <span className="px-2 py-4 text-gray-700">{quantity}</span>
             <button 
               onClick={increase}
-              className="px-4 py-2 text-gray-700 hover:bg-gray-50"
+              className="px-6 py-4 text-gray-700 hover:bg-gray-50"
             >
               +
             </button>

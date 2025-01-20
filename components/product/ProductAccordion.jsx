@@ -18,7 +18,7 @@ const ProductAccordion = ({ description, ingredients, howToUse }) => {
     <div className="mt-8">
       {sections.map((section, index) => (
         <button key={index} className='py-6 border-b border-black text-left' onClick={() => toggleSection(index)}>
-            <div className="flex justify-between items-center w-full h-full" >
+            <div className="flex justify-between items-center w-full h-full text-lg" >
               <span className="text-md font-medium">{section.title}</span>
               <span className="text-xl">{openSection === index ? '−' : '+'}</span>
             </div>
