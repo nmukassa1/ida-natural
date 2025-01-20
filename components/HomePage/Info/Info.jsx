@@ -2,7 +2,7 @@ import ImagePlaceholder from "@/components/common/ImagePlaceholder";
 
 function Info() {
     return ( 
-        <div className="global-align-center flex flex-col lg:flex-row lg:items-center lg:justify-center gap-8 py-[10%]">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-8 pb-24">
             {[
                 {
                     title: "Vegan",

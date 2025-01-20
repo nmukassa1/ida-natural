@@ -7,7 +7,7 @@ function CollectionsPage() {
    if(!products) return null
    
     return ( 
-      <div className="mt-4">
+      <div className="container mx-auto mt-4">
          <div className="">
             
 

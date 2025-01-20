@@ -23,10 +23,12 @@ function Header() {
     }, []);
 
     return ( 
-        <header className={`h-[70px] z-[999] global-align-center flex items-center justify-between sticky top-0 transition-bg duration-300 relative ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
-            <Navbar />
-            <BrandLogoButton />
-            <CartToggle />
+        <header className={`z-[999] sticky top-0 transition-bg duration-300 relative ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
+            <div className="container mx-auto flex items-center justify-between h-[70px]">
+                <Navbar />
+                <BrandLogoButton />
+                <CartToggle />
+            </div>
         </header>
      );
 }

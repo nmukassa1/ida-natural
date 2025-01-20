@@ -2,7 +2,7 @@ import ImagePlaceholder from "@/components/common/ImagePlaceholder";
 
 function About2() {
     return ( 
-        <div className="global-align-center mt-8">
+        <div className="container mx-auto py-24">
             <div className="border-2 border-black rounded-lg h-[70vh] grid grid-cols-1 lg:grid-cols-2">
                 <div className="text-center flex flex-col items-center justify-center gap-4">
                     <h1 className=" text-4xl">Our Story</h1>

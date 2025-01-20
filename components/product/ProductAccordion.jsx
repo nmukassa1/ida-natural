@@ -22,14 +22,14 @@ const ProductAccordion = ({ description, ingredients, howToUse }) => {
               className="flex justify-between items-center w-full h-full text-left"
               onClick={() => toggleSection(index)}
             >
-              <span className="text-sm font-medium">{section.title}</span>
+              <span className="text-md font-medium">{section.title}</span>
               <span className="text-xl">
                 {openSection === index ? '−' : '+'}
               </span>
             </button>
           </div>
           {openSection === index && (
-            <div className="text-sm text-gray-600 mb-4">
+            <div className="text-md text-gray-600 mb-4">
               {section.content}
             </div>
           )}

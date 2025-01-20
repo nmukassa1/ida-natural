@@ -9,7 +9,7 @@ const ProductIcons = ({ icons }) => {
           <div className="w-8 h-8 mx-auto mb-1">
             <ImagePlaceholder />
           </div>
-          <p className="text-xs">{icon.name}</p>
+          <p className="text-md">{icon.name}</p>
         </div>
       ))}
     </div>

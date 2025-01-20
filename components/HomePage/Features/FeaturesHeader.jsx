@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function FeaturesHeader({title}) {
     return ( 
-        <div className="global-align-center">
+        <div className=" mb-4">
             <div className="flex items-center justify-between">
                 <h1 className="text-2xl ">{title}</h1>
                 {/* <h1 className="text-2xl "> <strong>Featured</strong> products shop <br />

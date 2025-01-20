@@ -18,7 +18,8 @@ const page = async ({params}) => {
   }
 
   return (
-    <div className="flex flex-col">
+    <>
+
       <div className="flex flex-col lg:flex-row p-4 lg:px-8 gap-8">
         {/* Left Section: Product Images */}
         <div className="flex gap-4 w-full lg:w-1/2">
@@ -40,12 +41,13 @@ const page = async ({params}) => {
         </div>
 
         {/* Right Section: Product Details */}
-        <div className="w-full lg:w-1/2 flex flex-col">
+        <div className="w-full lg:w-1/2 flex flex-col md:pl-12 md:pr-24">
           <ProductHeader 
             brand={product.brand}
             title={product.name}
             price={`£${product.price.toFixed(2)}`}
           />
+          
 
           {/* Quantity Selector and Add to Cart Button */}
             <QuantitySelector product={product} />
@@ -54,9 +56,9 @@ const page = async ({params}) => {
             features={product.features}
           />
 
-          <ProductIcons 
+          {/* <ProductIcons 
             icons={product.icons.map(icon => ({ name: icon }))}
-          />
+          /> */}
 
           <ProductAccordion 
             description={product.description} // Pass product description
@@ -70,7 +72,8 @@ const page = async ({params}) => {
       <div className="px-4 lg:px-8">
         <RecommendedProducts />
       </div>
-    </div>
+      
+    </>
   );
 };
 

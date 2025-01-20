@@ -8,7 +8,7 @@ function ProductCard({className, product}) {
 
     return ( 
         <Link href={`/product/${product.slug}`}>
-            <div className={`${className} md:min-w-[340px] rounded-md overflow-hidden shrink-0 shadow-sm`}>
+            <div className={`${className} rounded-md overflow-hidden shrink-0 shadow-sm`}>
                 <div className="h-[180px] md:h-[60vh]">
                     <ImagePlaceholder />
                 </div>
