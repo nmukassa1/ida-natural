@@ -17,26 +17,17 @@ const ProductAccordion = ({ description, ingredients, howToUse }) => {
   return (
     <div className="mt-8">
       {sections.map((section, index) => (
-        <div key={index} className='py-6 border-b border-black'>
-          {/* {index > 0 && <hr className='border-t border-black my-2' />} */}
-          <div className="">
-          {/* <div className="h-16 border-t border-gray-200"> */}
-            <button 
-              className="flex justify-between items-center w-full h-full text-left"
-              onClick={() => toggleSection(index)}
-            >
+        <button key={index} className='py-6 border-b border-black text-left' onClick={() => toggleSection(index)}>
+            <div className="flex justify-between items-center w-full h-full" >
               <span className="text-md font-medium">{section.title}</span>
-              <span className="text-xl">
-                {openSection === index ? '−' : '+'}
-              </span>
-            </button>
-          </div>
+              <span className="text-xl">{openSection === index ? '−' : '+'}</span>
+            </div>
 
           <div className={`text-md text-gray-600 transition-all duration-300 ease-in-out  ${openSection === index ? 'max-h-screen opacity-100 translate-y-4 mb-4' : 'max-h-0 opacity-0 overflow-hidden translate-y-0'}`}>
             {section.content}
           </div>
 
-        </div>
+        </button>
       ))}
     </div>
   );
