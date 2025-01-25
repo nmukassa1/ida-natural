@@ -1,13 +1,14 @@
 "use client"
 
 import { useCart } from "@/lib/providers/CartProvider";
+import { ShoppingBag } from "lucide-react";
 
 function CartToggle() {
     const { setToggleCart } = useCart();
     return ( 
         <>
             <button className="" onClick={() => setToggleCart((prev) => !prev)}>
-                Cart
+                <ShoppingBag />
             </button>
         </>
      );

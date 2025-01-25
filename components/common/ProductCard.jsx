@@ -1,24 +1,29 @@
 import Link from "next/link";
 import ImagePlaceholder from "./ImagePlaceholder";
 
-function ProductCard({className, product}) {
+
+function ProductCard({className, product, animation, duration}) {
     if (!product) {
         return null; // Return null if product is undefined
     }
 
     return ( 
-        <Link href={`/product/${product.slug}`}>
-            <div className={`${className} rounded-md overflow-hidden shrink-0 shadow-sm`}>
-                <div className="h-[180px] md:h-[60vh]">
-                    <ImagePlaceholder />
-                </div>
-
-                <div className="flex items-center justify-between px-2 md:px-4 py-6 bg-white">
-                        <h3 className="text-sm md:text-base whitespace-nowrap overflow-hidden text-ellipsis w-3/4">{product.name}</h3>
-                        <p className="text-sm md:text-base">£{product.price}</p>
-                </div>
+        <div 
+            className={`${className} shrink-0 w-[250px] md:w-full`}
+            data-aos={animation}
+            data-aos-duration={duration}
+            >
+            <Link href={`/product/${product.slug}`} className="w-fit">
+            <div className="h-[300px] md:h-[60vh] rounded-2xl md:rounded-[50px] overflow-hidden" >
+                <ImagePlaceholder />
             </div>
-        </Link>
+
+            <div className="flex flex-col items-center justify-center px-2 md:px-4 py-6">
+                    <p className="text-sm md:text-base text-center md:whitespace-nowrap overflow-hidden text-ellipsis">{product.name}</p>
+                    <p className="text-sm md:text-base">£{product.price}</p>
+            </div>
+            </Link>
+        </div>
      );
 }
 

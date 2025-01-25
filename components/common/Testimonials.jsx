@@ -29,8 +29,8 @@ function Testimonials() {
       }, [api])
 
     return (
-        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 5000, })]} className="global-align-center lg:w-[80%] text-center mx-auto my-[10%] text-2xl">
-        <CarouselContent>
+        <Carousel setApi={setApi} plugins={[Autoplay({ delay: 5000, })]} className="lg:w-[80%] text-center mx-auto my-[10%] text-2xl">
+        <CarouselContent className="">
             <CarouselItem>
                     <p>“I am so happy with the service I received from this company. The team was professional and friendly and the work was completed to a very high standard. I would definitely recommend them to anyone looking for a reliable and trustworthy company.”</p>
                     <p className="author">- John Doe</p>

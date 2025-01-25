@@ -3,8 +3,8 @@ import ValueProposition from "./ValueProposition";
 
 function Hero() {
     return ( 
-        <div id="hero" className="py-8 md:py-[7rem] flex items-center border-b-2 container mx-auto">
-            <ValueProposition />
+        <div className="gird place-content-center h-[30vh]">
+            <h2 className=" text-center text-4xl md:text-5xl">Rediscover your skin's natural radiance.</h2>
         </div>
      );
 }

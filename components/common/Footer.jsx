@@ -1,11 +1,11 @@
 function Footer() {
     return ( 
-        <footer className="h-[100px] bg-pink-50 mt-[150px] flex flex-col items-center justify-center text-center">
+        <footer className="h-[100px] mt-[150px] flex flex-col items-center justify-center text-center">
             <div className="flex gap-4 mb-[100px]">
-                <a href="#" className="text-pink-600">contact us</a>
-                <a href="#" className="text-pink-600">faq</a>
-                <a href="#" className="text-pink-600">shipping & returns</a>
-                <a href="#" className="text-pink-600">order tracking</a>
+                <a href="#" className="">contact us</a>
+                <a href="#" className="">faq</a>
+                <a href="#" className="">shipping & returns</a>
+                <a href="#" className="">order tracking</a>
             </div>
             <div className="flex gap-4 mb-2">
                 <a href="#" className="text-gray-600">privacy policy</a>

@@ -1,23 +1,39 @@
 "use client"
-import { useState } from "react";
 import ProductCard from "./ProductCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
+import {products} from '@/lib/database/products'
+import ProgressBar from "./ProgressBar";
+import { useState } from "react";
 
-function ProductCarousel({ products }) {
-   
+function ProductCarousel() {
+
+    const [progress, setProgress] = useState(0)
+
+    function handleScroll(e){
+        const {scrollLeft, clientWidth} = e.target
+        const progress = Math.floor((scrollLeft / clientWidth)* 100 )
+        
+        setProgress(progress)    
+    }
+
+    
 
     return (
-        <div>
+        <div className="pb-6">
             <Carousel>
-                <CarouselContent>
+                <CarouselContent onScroll={(e) => handleScroll(e)}>
                     {products.map((product) => (
                         <CarouselItem key={product.id} className="md:basis-1/4 b-r-4 border-black">
                             <ProductCard product={product} />
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                
+                <ProgressBar progress={progress}>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </ProgressBar>
+
             </Carousel>
         </div>
     );
