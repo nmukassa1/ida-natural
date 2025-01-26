@@ -33,7 +33,6 @@ function FeaturedProducts({className}) {
         // Initialize AOS only on the client side
         AOS.init({
             duration: 2000, // Default animation duration
-            once: true, // Animation happens only once
         });
 
         // Optional: Refresh AOS if content changes dynamically
