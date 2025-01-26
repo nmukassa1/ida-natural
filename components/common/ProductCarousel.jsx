@@ -16,6 +16,7 @@ function ProductCarousel() {
         setProgress(progress)    
     }
 
+    if(!products) return null
     
 
     return (

@@ -11,6 +11,8 @@ AOS.init();
 
 function FeaturedProducts({className}) {
 
+    if(!products) return null
+
     const container = useRef()
 
     useEffect(() => {

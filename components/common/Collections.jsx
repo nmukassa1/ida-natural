@@ -6,6 +6,7 @@ function Collections() {
     const products = collections.flatMap(collection => collection.subMenu);
     // console.log(products);
     
+    if(!collections) return null
     
     return ( 
         // <div className="container mx-auto mt-[100px]">
