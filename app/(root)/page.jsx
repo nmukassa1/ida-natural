@@ -14,6 +14,7 @@ import Ingredients from "@/components/HomePage/Ingredients/Ingredients";
 
 
 
+
 export default function Home() {
   return (
     <>

@@ -8,20 +8,20 @@ import { Menu } from "lucide-react";
 function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 20) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (window.scrollY > 20) {
+    //             setIsScrolled(true);
+    //         } else {
+    //             setIsScrolled(false);
+    //         }
+    //     };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
 
     return ( 
         <header className={`z-[999] sticky top-0 transition-bg duration-300 relative text-[#f3e9e9] bg-[#212121]`}>

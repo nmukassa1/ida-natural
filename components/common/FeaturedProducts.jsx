@@ -7,7 +7,6 @@ import  ScrollTrigger from 'gsap/ScrollTrigger';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
-AOS.init();
 
 function FeaturedProducts({className}) {
 
@@ -29,6 +28,17 @@ function FeaturedProducts({className}) {
         // });
         // tl.to(container.current, { opacity: 1 }); // Animate opacity to 1
     }, [])
+
+    useEffect(() => {
+        // Initialize AOS only on the client side
+        AOS.init({
+            duration: 2000, // Default animation duration
+            once: true, // Animation happens only once
+        });
+
+        // Optional: Refresh AOS if content changes dynamically
+        AOS.refresh();
+    }, []);
 
     return ( 
         <div 
