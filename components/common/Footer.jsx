@@ -1,7 +1,7 @@
 function Footer() {
     return ( 
-        <footer className="h-[100px] mt-[150px] flex flex-col items-center justify-center text-center">
-            <div className="flex gap-4 mb-[100px]">
+        <footer className="w-[90vw] md:container mx-auto h-[100px] mt-[150px] flex flex-col items-center justify-center text-center">
+            <div className="flex gap-4 mb-[50px]">
                 <a href="#" className="">contact us</a>
                 <a href="#" className="">faq</a>
                 <a href="#" className="">shipping & returns</a>

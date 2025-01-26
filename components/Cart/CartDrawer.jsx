@@ -12,7 +12,7 @@ function CartDrawer() {
 
     return ( 
         <Drawer open={toggleCart} anchor="right">
-            <div className='h-full w-[500px] py-4 px-6 flex flex-col'>
+            <div className='h-full w-screen md:w-[500px] py-4 px-4 md:px-6 flex flex-col'>
                 <header className='flex justify-between'>
                     <h1 className='text-2xl'>Your cart ({numerOfItems})</h1>
                     <button onClick={() => setToggleCart((prev) => !prev)}><CircleX /></button>

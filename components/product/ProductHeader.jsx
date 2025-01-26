@@ -7,7 +7,7 @@ const ProductHeader = ({ brand, title, price }) => {
       <h1 className="text-2xl lg:text-3xl mb-2">{title}</h1>
       <div>
         <p className="text-xl font-bold">{price}</p>
-        <p className="text-sm text-gray-500">Tax included</p>
+        {/* <p className="text-sm text-gray-500">Tax included</p> */}
       </div>
     </div>
   );

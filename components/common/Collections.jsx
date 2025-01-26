@@ -14,7 +14,7 @@ function Collections() {
 
             <div className="flex items-center gap-6 overflow-scroll">
                 {collections.map((collection, index) => (
-                    <Link href={`/collections/${collection.name}`} key={collection.id} className={`${index === 0 && 'ml-[118.5px] lg:ml-[95px]'} ${index === collections.length -1 && 'mr-[118.5px] lg:mr-[95px]'} h-[50vh] w-[50vh] shrink-0 rounded-[50px] bg-gray-200 grid place-content-center`}>
+                    <Link href={`/collections/${collection.name}`} key={collection.id} className={`${index === 0 && 'ml-4 lg:ml-[95px]'} ${index === collections.length -1 && 'mr-4 lg:mr-[95px]'} h-[30vw] w-[30vw] md:h-[50vh] md:w-[50vh] shrink-0 rounded-2xl md:rounded-[50px] bg-gray-200 grid place-content-center`}>
                         <h2 className="text-2xl">{collection.title}</h2>
                     </Link>
                 ))}

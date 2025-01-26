@@ -19,20 +19,23 @@ export default function Home() {
     <>
       <Hero />
       
-
-      <div className="w-[90vw] md:container mx-auto">
-        <h1 className="text-4xl text-center mb-8">New In</h1>
-        <ProductCarousel />
+      <div>
+        <div className="md:container mx-auto">
+          <h1 className="text-4xl text-center mb-8 ">New In</h1>
+          <ProductCarousel />
+        </div>
       </div>
 
       <FeaturedProducts  />
       <Collections />
       <About2 />
      
-      <div className="container mx-auto mt-[200px]">
+     <div>
+     <div className="md:container mx-auto mt-[100px]">
         <h1 className="text-4xl text-center mb-8">Best Sellers</h1>
         <ProductCarousel />
       </div>
+     </div>
 
       <FeaturedProducts />
 

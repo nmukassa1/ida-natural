@@ -20,16 +20,16 @@ function ProductCarousel() {
 
     return (
         <div className="pb-6">
-            <Carousel>
+            <Carousel >
                 <CarouselContent onScroll={(e) => handleScroll(e)}>
-                    {products.map((product) => (
-                        <CarouselItem key={product.id} className="md:basis-1/4 b-r-4 border-black">
-                            <ProductCard product={product} />
+                    {products.map((product, index) => (
+                        <CarouselItem key={product.id} className={`${index === 0 && 'ml-4'} ${index === products.length -1 && 'mr-4'} md:basis-1/4 b-r-4 border-black`}>
+                            <ProductCard product={product} className="w-[250px]" />
                         </CarouselItem>
                     ))}
                 </CarouselContent>
                 
-                <ProgressBar progress={progress}>
+                <ProgressBar progress={progress} className="mx-4">
                     <CarouselPrevious />
                     <CarouselNext />
                 </ProgressBar>

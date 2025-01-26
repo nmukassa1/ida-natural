@@ -9,7 +9,7 @@ function ProductCard({className, product, animation, duration}) {
 
     return ( 
         <div 
-            className={`${className} shrink-0 w-[250px] md:w-full`}
+            className={`${className} shrink-0 md:w-full`}
             data-aos={animation}
             data-aos-duration={duration}
             >

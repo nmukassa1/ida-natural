@@ -18,7 +18,7 @@ function About2() {
     //     </div>
     //  );
     return ( 
-        <div className="h-[70vh] mt-[200px] grid place-content-center bg-gray-200">
+        <div className="h-[70vh] mt-[100px] grid place-content-center bg-gray-200">
                 <div className="text-center flex flex-col items-center justify-center gap-4">
                     <h1 className="text-4xl text-center mb-8">Our Story</h1>
                     <p className="w-1/2">
